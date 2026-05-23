@@ -32,7 +32,7 @@ Primary persona: właściciel jednego psa lub kota, który chce mieć trwałą, 
 ### Primary
 
 - W ciągu 3 tygodni pracy po godzinach właściciel może zarejestrować konto, dodać jedno zwierzę, uzupełnić jego podstawowe dane i ręcznie prowadzić historię zdrowia.
-- Właściciel może rozpocząć wpis wizyty i zapisać jedno pole tekstowe z notatkami, zaleceniami, dawkowaniem albo ustaleniami od weterynarza; zapisany wpis trafia do historii zdrowia zwierzęcia.
+- Właściciel może rozpocząć wpis wizyty i uzupełnić prosty formularz/kreator: sekcję opisu jako pole tekstowe oraz sekcję leków z nazwą leku, dawkowaniem i możliwością dodania kolejnego leku; zapisany wpis trafia do historii zdrowia zwierzęcia.
 
 ### Secondary
 
@@ -47,17 +47,19 @@ Primary persona: właściciel jednego psa lub kota, który chce mieć trwałą, 
 
 ## User Stories
 
-### US-01: Właściciel zapisuje notatkę z wizyty
+### US-01: Właściciel zapisuje formularz wizyty
 
 - **Given** zalogowany właściciel ma dodane jedno zwierzę
-- **When** rozpoczyna wpis wizyty i uzupełnia jedno pole tekstowe notatkami, zaleceniami albo dawkowaniem
+- **When** rozpoczyna wpis wizyty, uzupełnia sekcję opisu oraz dodaje jeden lub więcej leków z dawkowaniem
 - **Then** zapisany wpis pojawia się w historii zdrowia tego zwierzęcia i jest dostępny po ponownym zalogowaniu
 
 #### Acceptance Criteria
 
 - Właściciel nie może zapisać wpisu wizyty dla zwierzęcia, którego nie posiada.
 - Zapisany wpis pozostaje widoczny po wylogowaniu i ponownym zalogowaniu.
-- Pusty wpis tekstowy nie jest zapisywany jako element historii zdrowia.
+- Pusty formularz wizyty nie jest zapisywany jako element historii zdrowia.
+- Właściciel może dodać kolejny lek w sekcji leków przez plusik.
+- Każdy wpis leku zawiera nazwę leku i dawkowanie.
 
 ## Functional Requirements
 
@@ -81,9 +83,11 @@ Primary persona: właściciel jednego psa lub kota, który chce mieć trwałą, 
   > Socrates: Counter-argument considered: uzupełnianie historii wstecz może być pracochłonne i zniechęcające. Resolution: kept; to część MVP.
 - FR-006: Właściciel może rozpocząć wpis wizyty. Priority: must-have
   > Socrates: Counter-argument considered: osobne rozpoczęcie wizyty może być nadmiarowe wobec prostego "dodaj wpis". Resolution: kept; to część MVP.
-- FR-007: Właściciel może zapisać jedno pole tekstowe z notatkami, zaleceniami lub dawkowaniem z wizyty. Priority: must-have
-  > Socrates: Counter-argument considered: jedno pole tekstowe jest mało strukturalne i może utrudnić późniejsze filtrowanie szczepień, leków i dawek. Resolution: kept; to świadomie prosty kształt MVP.
-- FR-008: Właściciel może zobaczyć historię zdrowia zwierzęcia. Priority: must-have
+- FR-007: Właściciel może uzupełnić sekcję opisu wizyty jako pole tekstowe. Priority: must-have
+  > Socrates: Counter-argument considered: samo pole tekstowe jest mało strukturalne i może utrudnić późniejsze filtrowanie szczepień, leków i dawek. Resolution: revised; opis zostaje jako część formularza wizyty, a leki są wydzielone do osobnej sekcji.
+- FR-008: Właściciel może dodać w sekcji leków nazwę leku i dawkowanie oraz użyć plusika, żeby dodać kolejny lek. Priority: must-have
+  > Socrates: Counter-argument considered: wydzielenie leków zwiększa zakres MVP względem jednego pola tekstowego. Resolution: kept; to nadal prosty kreator, który lepiej symuluje notatki z realnej wizyty.
+- FR-009: Właściciel może zobaczyć historię zdrowia zwierzęcia. Priority: must-have
   > Socrates: Counter-argument considered: bez filtrowania lub osi czasu historia szybko stanie się nieczytelna. Resolution: kept; podgląd historii zostaje w MVP.
 
 ## Non-Functional Requirements
@@ -96,7 +100,7 @@ Primary persona: właściciel jednego psa lub kota, który chce mieć trwałą, 
 
 Aplikacja porządkuje wpisy zdrowotne zwierzęcia według daty i typu zdarzenia, żeby właściciel mógł szybko odtworzyć przebieg leczenia.
 
-Reguła konsumuje dane podane przez właściciela: datę lub moment zdarzenia, typ wpisu zdrowotnego oraz treść notatki z wizyty, zalecenia lub wcześniejszej historii. Wynikiem jest uporządkowana historia zdrowia widoczna z poziomu karty zwierzęcia.
+Reguła konsumuje dane podane przez właściciela: datę lub moment zdarzenia, typ wpisu zdrowotnego, opis wizyty oraz listę leków z dawkowaniem. Wynikiem jest uporządkowana historia zdrowia widoczna z poziomu karty zwierzęcia.
 
 Właściciel spotyka tę regułę po dodaniu lub zapisaniu wpisu: wpis trafia do historii zwierzęcia w takim miejscu, aby później można było wrócić do przebiegu leczenia bez przeszukiwania papierowych notatek.
 
@@ -114,6 +118,7 @@ Konto weterynarza, konto administratora, zatwierdzanie weterynarzy oraz dopisywa
 - Brak kont weterynarza i administratora w MVP — pierwsza wersja skupia się na właścicielu prowadzącym historię zdrowia swojego zwierzęcia.
 - Brak przechowywania plików zdjęć — właściciel podaje link do zdjęcia profilowego zwierzęcia.
 - Brak rezerwacji, kalendarza, czatu i powiadomień — komunikacja i organizacja wizyt są poza pierwszą wersją.
+- Brak przypomnień o lekach i odznaczania podanej dawki — to dalszy etap po prostym formularzu wizyty.
 - Brak funkcji społecznościowych — MVP skupia się na prywatnej historii zdrowia zwierzęcia.
 
 ## Open Questions
