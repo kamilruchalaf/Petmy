@@ -1,131 +1,131 @@
-# Roadmapa aplikacji Zwierzątko
+# Zwierzatko Application Roadmap
 
-## Etap 1: MVP
+## Stage 1: MVP
 
-Celem pierwszej wersji jest dostarczenie podstawowej elektronicznej książeczki zdrowia dla jednego zwierzęcia, z obsługą właściciela, weterynarza i administratora.
+The goal of the first version is to deliver a basic digital health booklet for one pet, with support for owners, veterinarians, and administrators.
 
-### Zakres MVP
+### MVP Scope
 
-#### 1. Rejestracja i logowanie
+#### 1. Registration and Login
 
-- Rejestracja użytkownika.
-- Wybór roli: właściciel zwierzęcia lub weterynarz.
-- Brak możliwości samodzielnej rejestracji jako administrator.
-- Logowanie i wylogowanie.
-- Usunięcie konta oraz danych użytkownika z systemu.
+- User registration.
+- Role selection: pet owner or veterinarian.
+- No self-service administrator registration.
+- Login and logout.
+- Account deletion and removal of the user's data from the system.
 
-#### 2. Role i uprawnienia
+#### 2. Roles and Permissions
 
-- Właściciel może zarządzać swoim zwierzęciem.
-- Weterynarz widzi tylko zwierzęta, które zostały mu udostępnione.
-- Administrator widzi listę użytkowników.
-- Administrator zatwierdza i cofa zatwierdzenie kont weterynarzy.
-- Zatwierdzenie weterynarza może mieć datę obowiązywania od-do.
+- The owner can manage their pet.
+- The veterinarian can see only pets shared with them.
+- The administrator can see the user list.
+- The administrator approves and revokes veterinarian accounts.
+- Veterinarian approval can have a valid-from and valid-to date range.
 
-#### 3. Profil zwierzęcia
+#### 3. Pet Profile
 
-- Dodanie jednego zwierzęcia.
-- Obsługa psa i kota.
-- Imię zwierzęcia.
-- Data urodzenia.
-- Możliwość oznaczenia daty urodzenia jako orientacyjnej.
-- Rasa jako pole tekstowe z podpowiedziami z predefiniowanej listy.
-- Waga.
-- Zdjęcie.
-- Dodatkowe informacje opcjonalne.
-- Podgląd danych zwierzęcia.
-- Edycja danych zwierzęcia.
+- Add one pet.
+- Support dogs and cats.
+- Pet name.
+- Date of birth.
+- Option to mark the date of birth as approximate.
+- Breed as a text field with suggestions from a predefined list.
+- Weight.
+- Photo.
+- Optional additional information.
+- View pet details.
+- Edit pet details.
 
-#### 4. Historia zdrowia
+#### 4. Health History
 
-- Dodawanie wpisów do historii zwierzęcia.
-- Możliwość wpisania leków, dawek i zaleceń.
-- Edycja wpisów dodanych przez właściciela.
-- Przechowywanie historii leczenia w jednym miejscu.
+- Add entries to the pet's history.
+- Enter medications, doses, and recommendations.
+- Edit entries added by the owner.
+- Store the treatment history in one place.
 
-#### 5. Współpraca z weterynarzem
+#### 5. Veterinarian Collaboration
 
-- Właściciel może udostępnić zwierzę wybranemu weterynarzowi.
-- Właściciel może wycofać udostępnienie.
-- Weterynarz może wyszukać tylko zwierzęta widoczne dla niego.
-- Weterynarz może dodawać zalecenia.
-- Weterynarz może dodawać informacje o szczepieniach i leczeniu.
+- The owner can share the pet with a selected veterinarian.
+- The owner can revoke sharing.
+- The veterinarian can search only pets visible to them.
+- The veterinarian can add recommendations.
+- The veterinarian can add vaccination and treatment information.
 
-### Efekt po MVP
+### Outcome After MVP
 
-Użytkownik ma działającą elektroniczną książeczkę zdrowia dla jednego psa lub kota. Może prowadzić historię zdrowia, aktualizować dane zwierzęcia i udostępniać je zatwierdzonemu weterynarzowi.
+The user has a working digital health booklet for one dog or cat. They can maintain the health history, update pet details, and share them with an approved veterinarian.
 
-## Etap 2: Rozszerzenie opieki nad zwierzęciem
+## Stage 2: Broader Pet Care
 
-Celem drugiej wersji jest rozwinięcie aplikacji o bardziej kompletne zarządzanie historią życia zwierzęcia i lepszą obsługę przypadków adopcji, śmierci lub zmiany właściciela.
+The goal of the second version is to expand the app with more complete lifecycle history management and better support for adoption, death, or ownership changes.
 
-### Zakres
+### Scope
 
-- Oznaczenie zwierzęcia jako pożegnanego.
-- Dodanie daty pożegnania.
-- Osobna, mniej eksponowana sekcja dla pożegnanych zwierząt.
-- Możliwość wyłączenia historii pożegnanych zwierząt.
-- Transfer danych zwierzęcia do innego użytkownika.
-- Proces przekazania zwierzęcia przy adopcji, sprzedaży lub zmianie opiekuna.
-- Zaplanowanie bezpiecznego mechanizmu transferu, np. przez kod QR lub czasowy kod dostępu.
+- Mark a pet as deceased.
+- Add a farewell date.
+- Separate, less prominent section for deceased pets.
+- Option to hide the history of deceased pets.
+- Transfer pet data to another user.
+- Process for handing over a pet during adoption, sale, or caregiver change.
+- Plan a secure transfer mechanism, for example via QR code or a temporary access code.
 
-## Etap 3: Wiele zwierząt i model premium
+## Stage 3: Multiple Pets and Premium Model
 
-Celem trzeciej wersji jest odejście od ograniczenia jednego zwierzęcia i przygotowanie aplikacji pod większą skalę użytkowania.
+The goal of the third version is to move beyond the one-pet limit and prepare the app for larger usage scale.
 
-### Zakres
+### Scope
 
-- Obsługa wielu zwierząt na jednym koncie.
-- Lista aktywnych zwierząt.
-- Filtrowanie i wyszukiwanie zwierząt.
-- Limity darmowego planu.
-- Płatny plan dla właścicieli z większą liczbą zwierząt.
-- Limity dla weterynarzy na liczbę podopiecznych.
-- Płatny plan dla weterynarzy obsługujących większą liczbę zwierząt.
+- Support multiple pets on one account.
+- List active pets.
+- Filter and search pets.
+- Free plan limits.
+- Paid plan for owners with more pets.
+- Limits for veterinarians on the number of patients.
+- Paid plan for veterinarians serving more pets.
 
-## Etap 4: Schroniska, hodowle i opiekunowie
+## Stage 4: Shelters, Breeders, and Caregivers
 
-Celem czwartej wersji jest wsparcie organizacji, które opiekują się większą liczbą zwierząt i często przekazują je nowym właścicielom.
+The goal of the fourth version is to support organizations that care for many pets and often hand them over to new owners.
 
-### Zakres
+### Scope
 
-- Specjalna rola opiekuna lub organizacji.
-- Darmowy wariant dla schronisk.
-- Zarządzanie większą liczbą zwierząt.
-- Uproszczony transfer zwierzęcia do nowego właściciela.
-- Historia opieki przed adopcją.
-- Możliwość prowadzenia danych zdrowotnych przez schronisko lub hodowlę.
+- Special caregiver or organization role.
+- Free variant for shelters.
+- Manage more pets.
+- Simplified pet transfer to a new owner.
+- Care history before adoption.
+- Ability for a shelter or breeder to maintain health data.
 
-## Etap 5: Komunikacja i rezerwacje
+## Stage 5: Communication and Booking
 
-Celem piątej wersji jest dodanie funkcji, które wspierają codzienny kontakt właściciela z weterynarzem.
+The goal of the fifth version is to add features that support day-to-day contact between the owner and veterinarian.
 
-### Zakres
+### Scope
 
-- System rezerwacji wizyt.
-- Podstawowy kalendarz wizyt.
-- Status wizyty.
-- Historia wizyt.
-- Czat z weterynarzem.
-- Powiadomienia o zaleceniach, szczepieniach i wizytach.
+- Visit booking system.
+- Basic visit calendar.
+- Visit status.
+- Visit history.
+- Chat with a veterinarian.
+- Notifications about recommendations, vaccinations, and visits.
 
-## Etap 6: Funkcje społecznościowe
+## Stage 6: Social Features
 
-Celem szóstej wersji jest dodanie funkcji wokół codziennego życia zwierzęcia, niezwiązanych bezpośrednio z dokumentacją medyczną.
+The goal of the sixth version is to add features around the pet's everyday life that are not directly tied to medical documentation.
 
-### Zakres
+### Scope
 
-- Grupy spacerowe.
-- Dodawanie znajomych zwierząt.
-- Zapraszanie przez kod QR lub krótko ważny kod.
-- Profil znajomego zwierzęcia.
-- Opcjonalna widoczność wybranych informacji publicznych.
+- Walking groups.
+- Add pet friends.
+- Invite through a QR code or short-lived code.
+- Friend pet profile.
+- Optional visibility of selected public information.
 
-## Priorytet realizacji
+## Delivery Priority
 
-1. MVP: książeczka zdrowia, role, jedno zwierzę, historia, udostępnianie weterynarzowi.
-2. Kolejna wersja: pożegnane zwierzęta i transfer danych.
-3. Wiele zwierząt i podstawy monetyzacji.
-4. Schroniska, hodowle i rola opiekuna.
-5. Rezerwacje i czat.
-6. Funkcje społecznościowe.
+1. MVP: health booklet, roles, one pet, history, veterinarian sharing.
+2. Next version: deceased pets and data transfer.
+3. Multiple pets and monetization foundations.
+4. Shelters, breeders, and caregiver role.
+5. Booking and chat.
+6. Social features.

@@ -1,3 +1,8 @@
+## Project Structure
+
+- Write Markdown files in English.
+- The web + backend version lives in `web/`. This is where the Astro, React, Supabase, Cloudflare, `package.json`, and npm scripts live.
+
 <!-- BEGIN @przeprogramowani/10x-cli -->
 
 ## 10xDevs AI Toolkit — Module 1, Lesson 3
