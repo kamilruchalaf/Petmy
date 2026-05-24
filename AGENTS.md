@@ -2,6 +2,8 @@
 
 - Write Markdown files in English.
 - The web + backend version lives in `web/`. This is where the Astro, React, Supabase, Cloudflare, `package.json`, and npm scripts live.
+- The mobile / Kotlin Compose Multiplatform version lives in `multiplatform/`, next to `web/`.
+- When a separate file variant is needed for the mobile part, use the `-mobile` suffix instead of `v2` numbering. Example: `verification-mobile.md`, not `verification-v2.md`.
 
 <!-- BEGIN @przeprogramowani/10x-cli -->
 

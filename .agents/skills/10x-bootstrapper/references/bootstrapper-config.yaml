@@ -35,6 +35,8 @@ starters:
     cwd_strategy: native-cwd
   expo:
     cwd_strategy: subdir-then-move
+  kotlin-compose-multiplatform:
+    cwd_strategy: git-clone
   10x-astro-starter:
     cwd_strategy: git-clone
   django:
