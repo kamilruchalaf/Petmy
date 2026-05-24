@@ -46,7 +46,6 @@ recommended_defaults:
   mobile:
     dart: flutter
     js: expo
-    multi: kotlin-compose-multiplatform
   desktop:
     rust: tauri
     js: <none>
@@ -870,39 +869,6 @@ starters:
     deployment_defaults: [appstore, playstore, self-host]
     bootstrapper_confidence: verified
     alternatives_to_consider: [expo]
-
-  kotlin-compose-multiplatform:
-    name: "Kotlin + Compose Multiplatform"
-    language_family: multi
-    description: >
-      Kotlin Multiplatform with Compose Multiplatform UI for sharing Kotlin code and UI across
-      Android, iOS, desktop, and web targets. Android-first for teams that want native Kotlin and
-      Gradle while keeping a path to additional platforms.
-    fit:
-      - "Android-first mobile app with Kotlin/Compose preference"
-      - "cross-platform UI or shared logic planned after the MVP"
-      - "team comfortable with Gradle and JetBrains tooling"
-    gotchas:
-      - "official project creation is wizard-first; CLI scaffolding relies on a best-effort template"
-      - "iOS setup requires Xcode and Apple signing configuration outside the scaffold"
-      - "web target is still more volatile than Android/Desktop"
-    agent_friendly:
-      typed: true
-      convention_based: true
-      popular_in_training: false
-      well_documented: true
-    stars: 19000
-    last_updated: 2026-03-19
-    docs_url: "https://github.com/JetBrains/compose-multiplatform"
-    for: [mobile-app, cross-platform, desktop-app]
-    tags: [kotlin, compose, multiplatform, android, ios, desktop, web, gradle]
-    toolchain:
-      package_manager: gradle
-      runtime_version: "JDK 17+"
-    cmd_template: "git clone https://github.com/JetBrains/compose-multiplatform-template {name}"
-    deployment_defaults: [playstore, appstore, self-host]
-    bootstrapper_confidence: best-effort
-    alternatives_to_consider: [flutter, expo]
 
   dotnet:
     name: ".NET (ASP.NET Core webapi)"
